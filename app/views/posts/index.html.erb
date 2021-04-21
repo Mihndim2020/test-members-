@@ -15,6 +15,9 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+      <%# check if the user is logged in before showing the username and password%>
+        <td><%= user_info(user_signed_in?, post)[:name] %></td>
+        <td><%= user_info(user_signed_in?, post)[:username] %></td>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
         <td><%= post.user_id %></td>
