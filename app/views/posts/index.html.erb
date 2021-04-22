@@ -15,15 +15,10 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-      <%# check if the user is logged in before showing the username and password%>
-        <td><%= user_info(user_signed_in?, post)[:name] %></td>
-        <td><%= user_info(user_signed_in?, post)[:username] %></td>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
         <td><%= post.user_id %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>

@@ -1051,3 +1051,263 @@ Did you mean?  user_session):
   
 app/views/posts/index.html.erb:19
 app/views/posts/index.html.erb:16
+Started GET "/" for ::1 at 2021-04-22 12:46:48 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:19
+  Rendered posts/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 6461)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 6529)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.7ms | Allocations: 6976)
+
+
+  
+ActionView::Template::Error (undefined method `user_info' for #<ActionView::Base:0x0000000000b1a8>
+Did you mean?  user_session):
+    16:     <% @posts.each do |post| %>
+    17:       <tr>
+    18:       <%# check if the user is logged in before showing the username and password%>
+    19:         <td><%= user_info(user_signed_in?, post)[:name] %></td>
+    20:         <td><%= user_info(user_signed_in?, post)[:username] %></td>
+    21:         <td><%= post.title %></td>
+    22:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:19
+app/views/posts/index.html.erb:16
+Started GET "/" for ::1 at 2021-04-22 12:47:31 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:19
+  Rendered posts/index.html.erb within layouts/application (Duration: 40.8ms | Allocations: 15448)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 15528)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 2.4ms | Allocations: 20465)
+
+
+  
+ActionView::Template::Error (undefined method `user_info' for #<ActionView::Base:0x00000000008c50>
+Did you mean?  user_session):
+    16:     <% @posts.each do |post| %>
+    17:       <tr>
+    18:       <%# check if the user is logged in before showing the username and password%>
+    19:         <td><%= user_info(user_signed_in?, post)[:name] %></td>
+    20:         <td><%= user_info(user_signed_in?, post)[:username] %></td>
+    21:         <td><%= post.title %></td>
+    22:         <td><%= post.body %></td>
+  
+app/views/posts/index.html.erb:19
+app/views/posts/index.html.erb:16
+Started GET "/" for ::1 at 2021-04-22 12:49:22 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 4415)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 4485)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.2ms | Allocations: 5808)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x00000000009150>
+Did you mean?  posts_path
+               font_path
+               root_path):
+    18:         <td><%= post.title %></td>
+    19:         <td><%= post.body %></td>
+    20:         <td><%= post.user_id %></td>
+    21:         <td><%= link_to 'Show', post %></td>
+    22:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    23:         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+  
+app/views/posts/index.html.erb:21
+app/views/posts/index.html.erb:16
+Started GET "/" for ::1 at 2021-04-22 12:49:24 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 4049)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 4118)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms | Allocations: 4578)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x000000000095b0>
+Did you mean?  posts_path
+               font_path
+               root_path):
+    18:         <td><%= post.title %></td>
+    19:         <td><%= post.body %></td>
+    20:         <td><%= post.user_id %></td>
+    21:         <td><%= link_to 'Show', post %></td>
+    22:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    23:         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+  
+app/views/posts/index.html.erb:21
+app/views/posts/index.html.erb:16
+Started GET "/" for ::1 at 2021-04-22 12:50:07 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 5324)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5393)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.1ms | Allocations: 6703)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post_path' for #<ActionView::Base:0x00000000009920>
+Did you mean?  posts_path
+               font_path
+               root_path):
+    18:         <td><%= post.title %></td>
+    19:         <td><%= post.body %></td>
+    20:         <td><%= post.user_id %></td>
+    21:         <td><%= link_to 'Show', post_path %></td>
+    22:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    23:         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+  
+app/views/posts/index.html.erb:21
+app/views/posts/index.html.erb:16
+Started GET "/" for ::1 at 2021-04-22 12:50:27 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 5163)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 5233)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms | Allocations: 6555)
+
+
+  
+ActionView::Template::Error (undefined method `edit_post_path' for #<ActionView::Base:0x00000000009df8>
+Did you mean?  edit_user_path):
+    19:         <td><%= post.body %></td>
+    20:         <td><%= post.user_id %></td>
+    21:         <td><%= link_to 'Show', posts_path %></td>
+    22:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    23:         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+    25:     <% end %>
+  
+app/views/posts/index.html.erb:22
+app/views/posts/index.html.erb:16
+Started GET "/" for ::1 at 2021-04-22 12:55:07 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 5366)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 5436)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms | Allocations: 6758)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `edit_post_path' for #<ActionView::Base:0x0000000000a2f8>
+Did you mean?  edit_user_path):
+    19:         <td><%= post.body %></td>
+    20:         <td><%= post.user_id %></td>
+    21:         <td><%= link_to 'Show', posts_path %></td>
+    22:         <td><%= link_to 'Edit', edit_post_path %></td>
+    23:         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+    25:     <% end %>
+  
+app/views/posts/index.html.erb:22
+app/views/posts/index.html.erb:16
+Started GET "/" for ::1 at 2021-04-22 13:02:22 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.8ms | Allocations: 5045)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 5114)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.8ms | Allocations: 6422)
+
+
+  
+ActionView::Template::Error (undefined method `post_path' for #<ActionView::Base:0x0000000000a7a8>
+Did you mean?  posts_path
+               font_path
+               root_path):
+    18:         <td><%= post.title %></td>
+    19:         <td><%= post.body %></td>
+    20:         <td><%= post.user_id %></td>
+    21:         <td><%= link_to 'Show', post %></td>
+    22:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    23:         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+  
+app/views/posts/index.html.erb:21
+app/views/posts/index.html.erb:16
+Started GET "/" for ::1 at 2021-04-22 13:03:22 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 963)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 7098)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.2ms | Allocations: 8473)
+
+
+Started GET "/posts/new" for ::1 at 2021-04-22 13:03:48 -0400
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 24.0ms | Allocations: 5552)
+  Rendered posts/new.html.erb within layouts/application (Duration: 28.7ms | Allocations: 6639)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 9608)
+Completed 200 OK in 63ms (Views: 40.8ms | ActiveRecord: 1.8ms | Allocations: 11371)
+
+
+Started POST "/posts" for ::1 at 2021-04-22 13:04:10 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"second post ", "body"=>"this is the second posts ", "user_id"=>""}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:28:in `create'
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "second post "], ["body", "this is the second posts "], ["user_id", 1], ["created_at", "2021-04-22 17:04:10.393032"], ["updated_at", "2021-04-22 17:04:10.393032"]]
+  ↳ app/controllers/posts_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:28:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 62ms (ActiveRecord: 15.7ms | Allocations: 11502)
+
+
+Started GET "/" for ::1 at 2021-04-22 13:04:10 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 757)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 3719)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.6ms | Allocations: 4196)
+
+
